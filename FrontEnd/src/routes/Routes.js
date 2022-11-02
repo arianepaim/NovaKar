@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import AtualizarCarro from "../components/AtualizarCarro/index.js";
 import Cards from "../components/Card/Cards.js";
 import Login from "../components/Login/index.js";
 // import { AuthProvider } from "./contexts/auth.js";
@@ -8,7 +9,8 @@ const Rotas = () => {
     <Router>
         <Routes>
           <Route path='/' element={<Cards/>} />
-          <Route path='/login' element={<Login />} />     
+          <Route path='/login' element={<Login />} />
+          <Route path='/edit' element={<AtualizarCarro/>} />    
           <Route path='*' element={<Navigate to='/' />} />
         </Routes>
     </Router>

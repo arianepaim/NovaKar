@@ -1,12 +1,12 @@
 import React from 'react'
-import Card from '../Card/Card'
+import CardAdm from '../CardAdm/CardAdm'
 import { useEffect, useState } from "react";
 import api from '../../service/api';
 import Header from '../Header';
 import Footer from '../Footer';
 
-function Cards() {
-
+function CardsAdm() {
+  
   const [carros, setCarros] = useState([]);
   const getCarros = async () => {
     const { data } = await api.get("/carros");
@@ -35,7 +35,7 @@ function Cards() {
               while (index <= 11) {
                 return (
                   <div className='col-md-3' key={index}>
-                    <Card nome={item.nome} preco={item.preco} modelo={item.modelo} marca={item.marca} />
+                    <CardAdm nome={item.nome} preco={item.preco} modelo={item.modelo} marca={item.marca} />
                   </div>
                 )
               }
@@ -48,4 +48,4 @@ function Cards() {
   )
 }
 
-export default Cards
+export default CardsAdm

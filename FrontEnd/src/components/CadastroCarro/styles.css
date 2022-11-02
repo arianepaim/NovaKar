@@ -1,0 +1,53 @@
+.car-novo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
+    transition: all 0.7s linear;
+}
+.car-form {
+    width: 50vw;
+    height: 80vh;
+    padding: 2%;
+    border-radius: 8px;
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.text-form {
+    padding-left: 7rem;
+    color: rgb(177, 43, 50);
+    font-weight: 700;
+}
+.label-form {
+
+    font-weight: 700;
+    color: rgb(90, 79, 79);
+    margin-left: 0;
+    word-wrap:unset;
+    font-size: medium;
+    padding-bottom: 0.5rem;    
+
+}
+.botao-cadCar{
+
+    padding-top: 2rem;
+    
+}
+
+.botao-cadCar > button{
+
+    width: 25vw;
+    max-height: 6.4vh;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(177, 43, 50);
+    color: white;
+    font-weight: 500;
+    margin-left: 10vw;
+    box-shadow: 2px 1px 7px 1px black;
+   
+    
+}

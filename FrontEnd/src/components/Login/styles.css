@@ -1,0 +1,59 @@
+.Auth-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
+    transition: all 0.7s linear;
+}
+
+.Auth-form {
+    width: 40vw;
+    padding: 2%;
+    border-radius: 8px;
+    background-color: white;
+    padding-top: 4%;
+    padding-bottom: 4%;
+   
+}
+
+.Auth-form-content {
+    padding-left: 12%;
+    padding-right: 12%;
+    
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+}
+
+
+
+.input-login, .input-senha {
+    box-shadow: inset 1px 2px 1px 1px gray;
+}
+
+.logo-login{
+
+    padding-left: 2.5rem;
+
+}
+
+.btn1{
+    width: 100%;
+    max-height: 7vh;
+    background-color: rgb(129, 42, 110) ;
+    color: white;
+    font-weight: bold;
+    margin-top: 4vh;
+    text-align: center;
+}
+
+.logo-login > img{
+
+    height: 90%;
+    width: 90%;
+}

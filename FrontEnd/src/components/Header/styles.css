@@ -4,8 +4,9 @@
     height: 10vh;
     display: flex;
     flex-flow: row nowrap;
+    background-color: rgb(168, 25, 25);
     padding: 2%;
-    padding-left: 1%;
+    padding-left: 4%;
     justify-content: space-around;
     box-shadow: 1px 10px 100px 100px black;
    
@@ -13,8 +14,8 @@
 
 .header-logo{
 
-    width: 15vw;
-    height: 9vh;
+    width: 12rem;
+    height: 3.5rem;
     align-self: center;
     
 }
@@ -29,15 +30,15 @@
    margin-left: 1vw;
    align-items: center;
    justify-content: space-around;
-   padding-left: 1vw;
-   padding-right: 1vw;
+   padding-right: 2vw;
+   padding-left: 2vw
 
 }
 
 .header-rotas > a{
     text-decoration: none;
     font-size: 20px;
-    color: white;
+    color: white;;
 
 }
 
@@ -45,4 +46,22 @@
 
     border-bottom: 1px solid black;
 
+}
+.exp-search > input{
+    width: 25rem;
+    height: 2.4rem;
+}
+.exp-search {
+    align-self: center;
+   display: flex;
+   flex-flow: row nowrap;
+   margin-left: 1vw;
+   align-items: center;
+   justify-content: space-around;
+   padding-left: 2vw;
+}
+
+.icons {
+    width: 2rem;
+    height: 2rem;
 }

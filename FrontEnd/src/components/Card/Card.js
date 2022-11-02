@@ -1,11 +1,11 @@
 import React from 'react'
 import "./card.css";
-import fusca from '../assets/fusca.jpg'
+import fusca from '../../assets/fusca.jpg'
 
 function Card({name, price}) {
   return (
     <div className='card-container'>
-    <div className='card text-center bg-dark animate__animated animate__fadeInUp'>
+      <div className='card text-center bg-dark animate__animated animate__fadeInUp'>
         <div className='overflow'>
             <img src={fusca} alt='' className='card-img-top'/>
         </div>
@@ -18,7 +18,7 @@ function Card({name, price}) {
                 </p>
                 <h3>R$ {price}</h3>
                 <p></p>
-                <a href='' className='btn btn-outline-secondary rounded-0' target='_blank'>
+                <a href='/' className='btn btn-outline-secondary rounded-0'>
                 Tenho Interesse
                 </a>
             </div>      

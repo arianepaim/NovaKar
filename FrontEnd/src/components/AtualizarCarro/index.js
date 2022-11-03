@@ -1,53 +1,67 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import api from '../../service/api'
 import Footer from '../Footer'
 import Header from '../Header'
 import "./styles.css"
+import { useParams } from "react-router-dom";
 
-function AtualizarCarro() {
+function AtualizarCarro () {
 
-    const [nome, setNome] = useState("")
-    const [preco, setPreco] = useState("")
-    const [marca, setMarca] = useState("")
-    const [imagem, setImagem] = useState("")
-    const [modelo, setModelo] = useState("")
-
+    const { id } = useParams();
+    const [modelo, setModelo] = useState('');
+    const [marca, setMarca] = useState('');
+    const [nome, setNome] = useState('');
+    const [preco, setPreco] = useState('');
+    const [imagem, setImagem] = useState('');
     const [carros, setCarros] = useState([]);
-
-    const createCar = async () => {
-        
-        if(preco===""||nome===""||marca===""||modelo==="") {
-            return alert("Existem campos inválidos ou não preenchidos!")
-        }
-
-        const newCar = {
-
+    
+    const salvarCarro = async() => {
+        const carrosData = {
+            id: id,
             nome: nome,
-            marca: marca,
-            modelo: modelo,
             preco: preco,
-            imagem: imagem,
+            modelo: modelo,
+            marca: marca,
+            imagem: imagem
         }
-
-        const {data} = await api.post('/carros', newCar);
-
-        setCarros(data)
-
-        alert("Carro cadastrado com sucesso");
-
+    
+        const { data } = await api.put(`/carros/${id}`, carrosData)
+    
+        const carroEditado = carros.map( carros => {
+          if(carros.id === data.id) {
+            return {
+              id: carros.id,...carrosData
+            }
+          }
+          return carros
+        })
+    
+        setCarros(carroEditado)
         setNome("")
         setPreco("")
-        setMarca("")
         setModelo("")
+        setMarca("")
         setImagem("")
+        
+        alert("Carro atualizado com sucesso")
     }
+
+    useEffect(() => {
+        setNome(nome);
+        setPreco(preco);
+        setModelo(modelo);
+        setMarca(marca);
+        setImagem(imagem);
+        return () => {
+        };
+    }, []);
 
   return (
     <>
     <Header/>    
     <div className='car-novo-container'>
-        <form className='car-form'>
-            <h1 className='text-form'>Adicionar novo carro</h1>
+        <div className='car-form'>
+            <h1 className='text-form1'>Atualizar carro</h1>
             <div>
                 <label className='label-form'>Nome do carro:</label>
                 <input type="text" maxLength="60" className="form-control" placeholder="Nome do carro" value={nome} onChange={e => setNome(e.target.value)}/>
@@ -69,11 +83,11 @@ function AtualizarCarro() {
                 <input type="text" maxLength="60" className="form-control" placeholder="Imagem do carro" value={imagem} onChange={e => setImagem(e.target.value)}/>
             </div>
             <div className="botao-cadCar">
-                <button type="button" onClick={createCar} >
+                <button type="button" onClick={salvarCarro} >
                 Salvar
                 </button>
             </div>
-        </form>      
+        </div>      
     </div>
     <Footer/>
     </>

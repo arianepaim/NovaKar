@@ -13,14 +13,14 @@
     align-content: center;
     width: 50vw;
     height: 80vh;
-    padding: 2%;
+    padding: 4%;
     border-radius: 8px;
     background-color: white;
     padding-top: 1%;
     padding-bottom: 1%;
 }
-.text-form {
-    padding-left: 7rem;
+.text-form1 {
+    padding-left: 11rem;
     color: rgb(177, 43, 50);
     font-weight: 700;
 }

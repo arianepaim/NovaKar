@@ -10,11 +10,11 @@ function Card({nome, preco, modelo, marca, imagem}) {
             <img src={fusca} alt='' className='card-img-top'/>
         </div>
             <div className='card-body text-light'>
-                <h4 className='card-title'>{marca}-{nome}</h4>
+                <h4 className='card-title'>{marca} {nome}</h4>
                 <p className='card-text text-secondary'>{modelo}</p>
                 <h3>R$ {preco}</h3>
                 <p></p>
-                <a href='/' className='btn btn-outline-secondary rounded-0'>
+                <a href='/cardsAdm' className='btn btn-outline-secondary rounded-0'>
                 Tenho Interesse
                 </a>
             </div>      

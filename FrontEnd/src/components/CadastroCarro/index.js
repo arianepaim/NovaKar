@@ -46,7 +46,7 @@ function CadastroCarro() {
     <>
     <Header/>    
     <div className='car-novo-container'>
-        <form className='car-form'>
+        <div className='car-form'>
             <h1 className='text-form'>Adicionar novo carro</h1>
             <div>
                 <label className='label-form'>Nome do carro:</label>
@@ -73,7 +73,7 @@ function CadastroCarro() {
                 Salvar
                 </button>
             </div>
-        </form>      
+        </div>      
     </div>
     <Footer/>
     </>

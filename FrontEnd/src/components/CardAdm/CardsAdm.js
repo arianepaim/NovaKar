@@ -35,7 +35,7 @@ function CardsAdm() {
               while (index <= 11) {
                 return (
                   <div className='col-md-3' key={index}>
-                    <CardAdm nome={item.nome} preco={item.preco} modelo={item.modelo} marca={item.marca} />
+                    <CardAdm id={item.id}nome={item.nome} preco={item.preco} modelo={item.modelo} marca={item.marca} />
                   </div>
                 )
               }

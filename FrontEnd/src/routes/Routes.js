@@ -11,11 +11,11 @@ const Rotas = () => {
   return (
     <Router>
         <Routes>
-          <Route path='/' element={<Cards/>} />
+          <Route path='/' element={<CardsAdm/>} />
           <Route path='/login' element={<Login />} />
           <Route path='/edit/:id' element={<AtualizarCarro/>} />
           <Route path='/delete/:id' element={<DeleteCarros/>} />
-          <Route path='/cardsAdm' element={<CardsAdm/>} />
+          <Route path='/cardsAdm' element={<Cards/>} />
           <Route path='/cadastrar' element={<CadastroCarro/>} />   
           <Route path='*' element={<Navigate to='/' />} />
         </Routes>

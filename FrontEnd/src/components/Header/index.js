@@ -20,7 +20,7 @@ const Header = () => {
       <div className="header-rotas">
        <a href="/"> Página inicial</a>
         <a href="/"> Sobre nós</a>    
-        <a href="/"> Comprar carro</a>
+        <a href="/cadastrar"> Adicionar carro</a>
         <a href="/login"><BiUserCircle className="icons"/></a>
 
       </div>
